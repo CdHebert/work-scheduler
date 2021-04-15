@@ -1,7 +1,7 @@
 
 var newTime = new Date();
-var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-//console.log(time);
+var thisHour = newTime.getHours();
+console.log(thisHour);
 
 function localTime() {
     var newTime = new Date();
@@ -32,6 +32,8 @@ var loadEvents = function () {
     $("#15").val(event15)
     $("#16").val(event16)
     $("#17").val(event17)
+
+    colorEffects();
 };
 
 
@@ -42,6 +44,19 @@ $(".btn").click(function () {
     localStorage.setItem("event" + id, areaText);
 });
 
+function colorEffects() {
+    for (i = 9; i <= 17; i++) {
+
+    if (i < thisHour) {
+    $("#" + i).addClass("past");
+    }else if (i > thisHour) {
+        $("#" + i).addClass("future");
+    }else {
+        $("#" + i).addClass("present");
+    }
+}
+};
+ 
 
 
 loadEvents();
