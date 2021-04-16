@@ -9,9 +9,9 @@ The work day scheduler is a document to schedule your day during your work day
 to help manage your time appropriately.
 with the color changing areas for easy understanding on where you are in your day.
 
-* **blue** = "is in the past"
-* **red** = "is in the past"
-* **green** = "is in the past"
+* **blue** = "is the past hours"
+* **red** = "is the present hour"
+* **green** = "is the future hours"
 
 ![work-day-scheduled](/assets/images/work-day-scheduled.png)
 
